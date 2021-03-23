@@ -5,8 +5,8 @@ import 'package:reader_project/ui/pages/bookshelf/book_detail.dart';
 
 class BookItem extends StatelessWidget {
   final BookModel model;
-
-  const BookItem({Key key, this.model}) : super(key: key);
+  final double width;
+  const BookItem({Key key, this.model,this.width = 0}) : super(key: key);
 
 
   @override
@@ -18,6 +18,7 @@ class BookItem extends StatelessWidget {
 
       child: Container(
         // color:Colors.orange,
+        width: this.width,
         child:Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

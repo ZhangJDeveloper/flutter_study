@@ -19,8 +19,7 @@ class MineHeaderView extends StatelessWidget {
             ),
             SizedBox(width: 25,),
             Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: Column(                crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("登录", style: TextStyle(fontSize: 18),),
                     SizedBox(height: 10,),

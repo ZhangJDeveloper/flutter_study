@@ -203,14 +203,24 @@ class _BookDetailPageState extends State<BookDetailPage> {
   }
 
   Widget buildNavgationBar(){
-    return Opacity(
-      opacity: navAlpha,
-      child: Container(
-        height: Screen.navigationBarHeight,
-        child: AppBar(
-          title: Text(model != null ? model.name:"详情"),
+
+    return Stack(
+      children: [
+        Container(
+          width: 44,
+          height: Screen.navigationBarHeight,
+          padding: EdgeInsets.fromLTRB(5, Screen.topSafeHeight, 0, 0),
+          child: GestureDetector(onTap:()=>Navigator.pop(context) , child: Image.asset('assets/images/2.0x/pub_back_white.png',)),
         ),
-      ),
+        Opacity(
+          opacity: navAlpha,
+          child: Container(
+          height: Screen.navigationBarHeight,
+          child: AppBar(
+            title: Text(model != null ? model.name:"详情"),
+          ),
+        ),
+      )],
     );
   }
 }
